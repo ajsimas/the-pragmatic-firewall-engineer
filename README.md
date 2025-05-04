@@ -17,7 +17,8 @@ will help you approach firewall policy with intention and clarity.
 ## Table of contents
 
 1. [Introduction](#introduction)
-2. [Core design principles](#core-design-principles)
+2. [Contributing](#contributing)
+3. [Core design principles](#core-design-principles)
    - [Understand your network](#understand-your-network)
    - [Naming conventions](#naming-conventions)
    - [Rule ordering strategy](#rule-ordering-strategy)
@@ -26,6 +27,8 @@ will help you approach firewall policy with intention and clarity.
    - [Limitations and scalability](#limitations-and-scalability)
    - [Change management](#change-management)
    - [Microsegmentation and zero trust](#microsegmentation-and-zero-trust)
+4. [Practical examples and case studies](#practical-examples-and-case-studies)
+5. []
 
 ## Core design principles
 
