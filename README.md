@@ -16,6 +16,17 @@ approach firewall policy with intention and clarity.
 
 ## Table of contents
 
+1. [Introduction](#introduction)
+2. [Core design principles](#core-design-principles)
+   - [Understand your network](#understand-your-network)
+   - [Naming conventions](#naming-conventions)
+   - [Rule ordering strategy](#rule-ordering-strategy)
+   - [Logging](#logging)
+   - [Security profiles and layered defenses](#security-profiles-and-layered-defenses)
+   - [Limitations and scalability](#limitations-and-scalability)
+   - [Change management](#change-management)
+   - [Microsegmentation and zero trust](#microsegmentation-and-zero-trust)
+
 ## Core design principles
 
 ### Understand your network
