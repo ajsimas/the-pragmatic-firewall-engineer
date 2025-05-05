@@ -3,7 +3,7 @@
 ## Table of contents
 
 1. [Introduction](#introduction)
-2. [Contributing](#contributing)
+2. [Contributing](/Contributing.md)
 3. [Core design principles](#core-design-principles)
    - [Understand your network](#understand-your-network)
    - [Naming conventions](#naming-conventions)
