@@ -32,6 +32,7 @@ Your firewall policy is only as good as your understanding of the environment it
 protects. Make network visibility your first priority.
 
 ## Naming conventions
+> [!IMPORTANT] When creating names, consider the following guidelines:
 
 ## Rule ordering strategy
 
