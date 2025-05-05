@@ -99,6 +99,17 @@ name, but common categories include:
 
 ### Commenting conventions
 
+- **Explain intent, not mechanics:** Avoid restating what the rule does (e.g.
+  Allow TCP 443). Instead, expalin why the rule exists (e.g. required for
+  month-end reporting).
+- **Put a ticket number in the comment:** There is often too much information to
+  include in a comment field (e.g. requester, justification, expiration date,
+  documentation, creation date, creator, etc.). Instead, consider putting only a
+  ticket number in your comment field and make sure all of the important context
+  is in the ticket.
+- **Use a consistent format:** Consistency is more important than the specific
+  format you choose.
+
 ### Tagging conventions
 
 ## Rule ordering strategy
