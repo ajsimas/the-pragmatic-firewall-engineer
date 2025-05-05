@@ -125,7 +125,38 @@ guide is written for firewalls that evaluate rules in top-down order.
 - **Place the most specific rules at the top:** Rules that match specific
   addresses, services, or applications should be placed before more general
   rules. This ensures that the most relevant rules are evaluated first.
+
 ## Logging
+
+Well designed logging supports general network troubleshooting, security
+investigations, and compliance audits. It also helps you understand how your
+firewall is being used, which can inform future policy decisions.
+
+### What to log
+
+When in doubt, log it. Start from a position of logging everything and only
+disable logging when you have to for performance or disk space limitations.
+
+### Logging platform
+
+There is a wide variety of logging platforms and they come in a wide variety of
+usefulness. If your firewall vendor has a logging product, start there, but
+don't stop there. SIEMs can also be useful for firewall logging (even for
+non-security incident activities). At a minimum, your logging platform should be
+able to:
+
+- Aggregate logs from multiple firewalls
+- Have robust search and filtering capabilities
+- Support complex boolean logic
+- Aggregate logs by one or more fields that you choose (see note below)
+
+> [!NOTE]  
+> The value that comes with robust custom log aggregation cannot be overstated.
+> It allows administrators to distill millions of raw firewall events into
+> actionable insights that identify top talkers, unexpected flows, misconfigured
+> rules, or signs of malicious activity. Grouping logs by key dimensions like
+> source IP, destination IP, and service port provides a high-level view of
+> traffic behavior.
 
 ## Security profiles and layered defenses
 
