@@ -112,6 +112,19 @@ name, but common categories include:
 
 ## Rule ordering strategy
 
+The order of firewall rules directly affects both security and performance. This
+guide is written for firewalls that evaluate rules in top-down order.
+
+### General guidelines
+
+- **Create logical groups:** Group similar rules together. For example, group
+  rules by direction, site, application, service, or source/destination IP
+  address. Use whatever grouping makes sense for your environment.
+- **Separate user and server traffic:** With few exceptions, firewall rules
+  should either be for user traffic or server traffic.
+- **Place the most specific rules at the top:** Rules that match specific
+  addresses, services, or applications should be placed before more general
+  rules. This ensures that the most relevant rules are evaluated first.
 ## Logging
 
 ## Security profiles and layered defenses
