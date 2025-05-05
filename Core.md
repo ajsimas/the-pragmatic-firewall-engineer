@@ -31,8 +31,9 @@ designing rules that reflect intentional, necessary access.
 Your firewall policy is only as good as your understanding of the environment it
 protects. Make network visibility your first priority.
 
-## Naming conventions
-> [!NOTE] When creating names, consider the following guidelines: another test,
+<!-- prettier-ignore -->
+> [!NOTE]
+> When creating names, consider the following guidelines: another test,
 > sdfosdi sodijoisdojsd foijsdfoi sdoifj soidjfoisdjf oijsd foijsdoij oisdjf
 > osidjf osdijf oisjd foijsd foijsdfoijsdoi
 
