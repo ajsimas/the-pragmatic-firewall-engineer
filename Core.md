@@ -110,8 +110,6 @@ name, but common categories include:
 - **Use a consistent format:** Consistency is more important than the specific
   format you choose.
 
-### Tagging conventions
-
 ## Rule ordering strategy
 
 ## Logging
