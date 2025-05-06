@@ -160,6 +160,56 @@ able to:
 
 ## Security profiles and layered defenses
 
+### Application control
+
+- Block obviously malicious applications (e.g. malware, botnets, etc.)
+- Block applications that are not needed for business operations (e.g. P2P,
+  proxies, etc.)
+- Block legitimate applications that are often abused by threat actors (e.g. RMM
+  tools, remote access tools, file transfer tools, etc.)
+- Block applications on non-standard ports (e.g. DNS is the only application
+  that can pass through a policy that only allows UDP/53)
+
+### Deep packet inspection (DPI)
+
+> [!NOTE]  
+> Deep packet inspection is also known as SSL decryption, TLS decryption, SSL
+> inspection, HTTPS inspection, and other names.
+
+More than 90% of internet http traffic is encrypted using TLS. Many firewall
+security features like antivirus, application control, and some IPS signatures
+won't work for encrypted traffic. The solution is to perform a man-in-the-middle
+(MITM) attack on yourself, through the clever use of public key infrastructure.
+Traffic is encrypted at the client, sent to the firewall, decrypted on the
+firewall, inspected by the firewall, re-encrypted on the firewall, and then sent
+to the server. The same steps happen in reverse for return traffic. Each
+firewall vendor has a unique way of implementing this functionality. Consult
+your firewall documentation for specific instructions for your firewall.
+
+> [!WARNING]  
+> Many types of traffic are broken by DPI. Certificate pinning is the most
+> common problem. Read more about certificate pinning here:
+> [What is Certificate pinning?](https://learn.microsoft.com/en-us/azure/security/fundamentals/certificate-pinning)
+
+> [!WARNING]  
+> There may be legal implications to performing DPI on certain types of traffic.
+> Consult your legal department before decrypting medical, financial, or other
+> sensitive traffic.
+
+### Intrusion prevention system (IPS)
+
+IPS is a network security technology that monitors network and/or systems
+activities for malicious activity. It can be used to detect and block malicious
+traffic, as well as to alert security personnel to potential security incidents.
+IPS can be deployed in a variety of ways, including as a network appliance, a
+software application, or a cloud-based service.
+
+#### General guidelines
+
+Start by enabling all IPS signatures, but in an monitor/logging only mode. Once
+enough time has passed, you should have the data you need to start strategically
+setting certain IPS categories to block mode.
+
 ## Limitations and scalability
 
 ## Change management
