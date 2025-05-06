@@ -210,8 +210,13 @@ Start by enabling all IPS signatures, but in an monitor/logging only mode. Once
 enough time has passed, you should have the data you need to start strategically
 setting certain IPS categories to block mode.
 
-## Limitations and scalability
-
 ## Change management
+
+Change management is the process of requesting, reviewing, approving,
+implementing, and documenting changes to firewall policy. It is essential a
+change process is developed with the appropriate stakeholders, documented
+clearly, and followed consistently. This will help ensure that changes are made
+in a controlled and predictable manner, reducing the risk of errors and
+improving the overall security posture of the firewall.
 
 ## Microsegmentation and zero trust
