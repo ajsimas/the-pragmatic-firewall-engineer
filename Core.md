@@ -218,5 +218,3 @@ change process is developed with the appropriate stakeholders, documented
 clearly, and followed consistently. This will help ensure that changes are made
 in a controlled and predictable manner, reducing the risk of errors and
 improving the overall security posture of the firewall.
-
-## Microsegmentation and zero trust
