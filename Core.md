@@ -13,12 +13,13 @@ decisions.
 
 Before writing a single firewall rule, you must have a clear understanding of
 the network you're defending. This includes knowing what systems exist, how they
-communicate, which of those communications are critical to operations. and where
+communicate, which of those communications are critical to operations, and where
 your crown jewels are.
 
 1. Identify the systems and services that exist on your network.
 2. Identify various trust zones that make up your network (such as internal
-   networks, DMZs, cloud segments, partner connections, and the public internet)
+   networks, DMZs, cloud segments, partner connections, and the public
+   internet).
 3. Map out traffic flows between your trust zones. Consider not just current
    usage, but future scalability and potential risks introduced by new services.
 
@@ -37,7 +38,7 @@ Conventions are essential for maintaining clarity, consistency, and long-term
 maintainability in firewall policy. While the specific choices you make are less
 important than the act of choosing and applying them consistently, it’s critical
 that they are documented clearly and that your entire team understands and
-follows them. This will prevent confusion, reduces errors, and simplify ongoing
+follows them. This will prevent confusion, reduce errors, and simplify ongoing
 management.
 
 ### Naming conventions
@@ -77,16 +78,16 @@ important than choosing the "right" convention.
 - lowercase (e.g., `webservergroup`)
 
 > [!NOTE]  
-> It is generally to avoid using ALL CAPS for names, as this can become visually
-> overwhelming and harder to read, especially in long lists of objects. If it is
-> used at all, it should be reserved for special cases.
+> It is generally best to avoid using ALL CAPS for names, as this can become
+> visually overwhelming and harder to read, especially in long lists of objects.
+> If it is used at all, it should be reserved for special cases.
 
 #### Object types that require naming conventions
 
 Depending on your firewall platform, you may have different types of objects to
 name, but common categories include:
 
-- addresss objects
+- address objects
 - address groups
 - service objects
 - service groups
@@ -100,7 +101,7 @@ name, but common categories include:
 ### Commenting conventions
 
 - **Explain intent, not mechanics:** Avoid restating what the rule does (e.g.
-  Allow TCP 443). Instead, expalin why the rule exists (e.g. required for
+  Allow TCP 443). Instead, explain why the rule exists (e.g. required for
   month-end reporting).
 - **Put a ticket number in the comment:** There is often too much information to
   include in a comment field (e.g. requester, justification, expiration date,
@@ -112,8 +113,9 @@ name, but common categories include:
 
 ## Rule ordering strategy
 
-The order of firewall rules directly affects both security and performance. This
-guide is written for firewalls that evaluate rules in top-down order.
+The order in which firewall rules are evaluated directly affects both security
+and performance. This guide is written for firewalls that evaluate rules in
+top-down order.
 
 ### General guidelines
 
@@ -128,7 +130,7 @@ guide is written for firewalls that evaluate rules in top-down order.
 
 ## Logging
 
-Well designed logging supports general network troubleshooting, security
+Well-designed logging supports general network troubleshooting, security
 investigations, and compliance audits. It also helps you understand how your
 firewall is being used, which can inform future policy decisions.
 
@@ -139,11 +141,10 @@ disable logging when you have to for performance or disk space limitations.
 
 ### Logging platform
 
-There is a wide variety of logging platforms and they come in a wide variety of
-usefulness. If your firewall vendor has a logging product, start there, but
-don't stop there. SIEMs can also be useful for firewall logging (even for
-non-security incident activities). At a minimum, your logging platform should be
-able to:
+There is a wide variety of logging platforms and they vary widely in usefulness.
+If your firewall vendor has a logging product, start there, but don't stop
+there. SIEMs can also be useful for firewall logging (even for non-security
+incident activities). At a minimum, your logging platform should be able to:
 
 - Aggregate logs from multiple firewalls
 - Have robust search and filtering capabilities
@@ -167,8 +168,8 @@ able to:
   proxies, etc.)
 - Block legitimate applications that are often abused by threat actors (e.g. RMM
   tools, remote access tools, file transfer tools, etc.)
-- Block applications on non-standard ports (e.g. DNS is the only application
-  that can pass through a policy that only allows UDP/53)
+- Block applications on non-standard ports (e.g., only allow DNS through a
+  policy that allows UDP/53)
 
 ### Deep packet inspection (DPI)
 
@@ -177,7 +178,7 @@ able to:
 > inspection, HTTPS inspection, and other names.
 
 More than 90% of internet http traffic is encrypted using TLS. Many firewall
-security features like antivirus, application control, and some IPS signatures
+security features, like antivirus, application control, and some IPS signatures,
 won't work for encrypted traffic. The solution is to perform a man-in-the-middle
 (MITM) attack on yourself, through the clever use of public key infrastructure.
 Traffic is encrypted at the client, sent to the firewall, decrypted on the
@@ -206,15 +207,15 @@ software application, or a cloud-based service.
 
 #### General guidelines
 
-Start by enabling all IPS signatures, but in an monitor/logging only mode. Once
+Start by enabling all IPS signatures, but in a monitor/logging-only mode. Once
 enough time has passed, you should have the data you need to start strategically
 setting certain IPS categories to block mode.
 
 ## Change management
 
 Change management is the process of requesting, reviewing, approving,
-implementing, and documenting changes to firewall policy. It is essential a
-change process is developed with the appropriate stakeholders, documented
+implementing, and documenting changes to firewall policy. It is essential that a
+change process be developed with the appropriate stakeholders, documented
 clearly, and followed consistently. This will help ensure that changes are made
 in a controlled and predictable manner, reducing the risk of errors and
 improving the overall security posture of the firewall.
