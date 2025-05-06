@@ -4,16 +4,13 @@
 
 1. [Introduction](#introduction)
 2. [Contributing](/Contributing.md)
-3. [Core design principles](Core.md#core-design-principles)
-   - [Understand your network](Core.md#understand-your-network)
-   - [Naming conventions](Core.md#naming-conventions)
-   - [Rule ordering strategy](Core.md#rule-ordering-strategy)
-   - [Logging](Core.md#logging)
-   - [Security profiles and layered defenses](Core.md#security-profiles-and-layered-defenses)
-   - [Limitations and scalability](Core.md#limitations-and-scalability)
-   - [Change management](Core.md#change-management)
-   - [Microsegmentation and zero trust](Core.md#microsegmentation-and-zero-trust)
-4. [Practical examples and case studies](#practical-examples-and-case-studies)
+3. [Core design principles](/Core.md)
+   - [Understand your network](/Core.md#understand-your-network)
+   - [Establish conventions](/Core.md#establish-conventions)
+   - [Rule ordering strategy](/Core.md#rule-ordering-strategy)
+   - [Logging](/Core.md#logging)
+   - [Security profiles and layered defenses](/Core.md#security-profiles-and-layered-defenses)
+   - [Change management](/Core.md#change-management)
 
 ## Introduction
 
